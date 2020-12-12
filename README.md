@@ -1,1 +1,3 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+# AtakanZengin
+
+My personal landing page that will eventually replace the former one.
