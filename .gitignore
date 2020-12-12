@@ -17,6 +17,7 @@
 
 # misc
 .DS_Store
+.history
 
 # debug
 npm-debug.log*
