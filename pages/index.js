@@ -13,25 +13,29 @@ export default function Home({ allPostsData }) {
       </Head>
       <section className={utilStyles.headingMd}>
         <p>
-          I'm a full-stack developer and a 3D Art enthusiast in Istanbul,
-          Turkey. I'm currently working at an E-commerce platform.
+          I'm a software developer and a 3D Art enthusiast in Istanbul, Turkey.
+          I'm currently working at an E-commerce platform.
         </p>
 
         <p>
-          I'm interested in 3D CG and animation. Hopefully I'll be sharing my
-          works in the near future.
+          I'm interested in 3D CG and animation. Hopefully, I'll be sharing my
+          works shortly.
         </p>
 
         <p>
-          I'm also a senior on Translation and Interpretation in English. So
+          I'm also a senior in Translation and Interpretation in English. So
           natural languages are one of my interests as well as programming
-          languages. Apart from this, I like playing video games and come up
-          with stories and characters in my free time.
+          languages.
+        </p>
+
+        <p>
+          Apart from this, I like playing video games and being creative in my
+          free time.
         </p>
 
         <p>
           I always want to create the best solutions and products for the
-          people. I believe with hardwork and passion, I'll be able to
+          people. I believe with hard work and passion, I'll be able to
           contribute to our ever-growing technology, and create immersive and
           unique works.
         </p>
