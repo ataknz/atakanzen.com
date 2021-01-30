@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  @apply p-0 m-0 text-lg;
+  font-family: "Rubik", serif;
+}
+
+* {
+  @apply box-border;
+}
+
+a {
+  @apply no-underline text-blue-600;
+}
+
+a:hover {
+  @apply no-underline text-blue-700;
+}
+
+.headerName {
+  font-family: "Roboto Slab", serif;
+  @apply text-4xl;
+}
+
+.headerWhoAmI {
+  font-family: "Roboto Slab", serif;
+  @apply text-base;
+}
