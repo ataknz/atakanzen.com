@@ -27,5 +27,5 @@ a:hover {
 
 .headerWhoAmI {
   font-family: "Roboto Slab", serif;
-  @apply text-base;
+  @apply text-base italic text-gray-700;
 }

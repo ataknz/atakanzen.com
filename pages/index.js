@@ -1,6 +1,6 @@
 import { NextSeo } from "next-seo";
 import Head from "next/head";
-import Me from "../components/me";
+import Me from "../components/Me";
 
 export default function Home() {
   return (
@@ -12,10 +12,11 @@ export default function Home() {
           type="image/x-icon"
         />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Rubik:ital,wght@0,400;0,500;1,400;1,500&display=swap"
           rel="stylesheet"
-        ></link>
+        />
       </Head>
       <NextSeo
         title="Atakan Zengin • Software • Art"
