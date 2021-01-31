@@ -17,13 +17,6 @@ const ProfileImage = ({ size = 200 }) => {
         width={size}
         quality={75}
       ></Image>
-      <div
-        className="absolute rounded-full inset-0"
-        style={{
-          boxShadow:
-            "inset 0 0 0 1px rgba(0,0,0,0.15), inset 0 0 0 2px rgba(255,255,255,0.2)",
-        }}
-      />
     </div>
   );
 };

@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 html,
-body {
-  @apply p-0 m-0 text-lg;
+body,
+body > div {
+  @apply flex flex-col container mx-auto max-w-screen-lg min-h-full;
   font-family: "Rubik", serif;
 }
 
@@ -13,11 +14,15 @@ body {
 }
 
 a {
-  @apply no-underline text-blue-600;
+  @apply no-underline text-blue-600 font-medium rounded p-1;
 }
 
 a:hover {
-  @apply no-underline text-blue-700;
+  @apply no-underline text-blue-900;
+}
+
+a:focus {
+  @apply ring-2 ring-blue-50;
 }
 
 .headerName {

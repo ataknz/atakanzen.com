@@ -1,6 +1,6 @@
 import { NextSeo } from "next-seo";
 import Head from "next/head";
-import Me from "../components/Me";
+import Hero from "../components/Hero";
 
 export default function Home() {
   return (
@@ -28,12 +28,7 @@ export default function Home() {
           cardType: "summary_large_image",
         }}
       ></NextSeo>
-      <div className="container mx-auto my-4 max-h-full">
-        <Me
-          name="Atakan Zengin"
-          whoAmI="Software Developer &amp; Art Enthusiast"
-        />
-      </div>
+      <Hero />
     </>
   );
 }
