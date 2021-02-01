@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const ProfileImage = ({ size = 200 }) => {
+export const ProfileImage = ({ size = 200 }) => {
   return (
     <div
       className="relative rounded-full"
@@ -20,5 +20,3 @@ const ProfileImage = ({ size = 200 }) => {
     </div>
   );
 };
-
-export default ProfileImage;

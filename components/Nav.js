@@ -1,25 +1,25 @@
-import Link from "next/link";
+import ActiveLink from "./ActiveLink";
 
-const Nav = () => {
+export const Nav = () => {
   return (
-    <nav className="flex items-center justify-between my-4 max-w-full">
-      <Link href="/">
-        <a>Home</a>
-      </Link>
-      <ul className="flex gap-4">
+    <nav className="my-4 max-w-full">
+      <ul className="flex items-center justify-center gap-6">
         <li>
-          <Link href="/work">
+          <ActiveLink activeClassName="underline" href="/">
+            <a>Home</a>
+          </ActiveLink>
+        </li>
+        <li>
+          <ActiveLink activeClassName="underline" href="/work">
             <a>Work</a>
-          </Link>
+          </ActiveLink>
         </li>
         <li className="">
-          <Link href="/blog">
+          <ActiveLink activeClassName="underline" href="/blog">
             <a>Blog</a>
-          </Link>
+          </ActiveLink>
         </li>
       </ul>
     </nav>
   );
 };
-
-export default Nav;

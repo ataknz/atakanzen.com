@@ -1,5 +1,5 @@
-import ProfileImage from "./ProfileImage";
-import Nav from "./Nav";
+import { ProfileImage } from "./ProfileImage";
+import { Nav } from "./Nav";
 
 function Hero() {
   return (
@@ -13,9 +13,24 @@ function Hero() {
             Software Developer &amp; Art Enthusiast
           </h2>
           <div className="max-w-sm flex gap-3">
-            <a href="http://twitter.com/atakanzzengin">Twitter</a>
-            <a href="http://github.com/ataknz">Github</a>
-            <a href="http://linkedin.com/in/ataknz">Linkedin</a>
+            <a
+              className="transform hover:scale-105"
+              href="http://twitter.com/atakanzzengin"
+            >
+              Twitter
+            </a>
+            <a
+              className="transform hover:scale-105"
+              href="http://github.com/ataknz"
+            >
+              Github
+            </a>
+            <a
+              className="transform hover:scale-105"
+              href="http://linkedin.com/in/ataknz"
+            >
+              Linkedin
+            </a>
           </div>
         </div>
       </div>
