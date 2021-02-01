@@ -5,7 +5,7 @@
 html,
 body,
 body > div {
-  @apply flex flex-col container mx-auto max-w-screen-lg min-h-full;
+  @apply container mx-auto max-w-screen-lg min-h-full;
   font-family: "Rubik", serif;
 }
 
