@@ -15,9 +15,7 @@ export default async (req, res) => {
   });
 
   const url = `https://zengin.me/og?title=${title}`;
-  await page.goto(url, {
-    timeout: 15 * 1000,
-  });
+  await page.goto(url);
   const data = await page.screenshot({
     type: "png",
   });
