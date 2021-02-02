@@ -25,12 +25,6 @@ a:focus {
   @apply ring-2 ring-blue-50;
 }
 
-.headerName {
+.robotoSlab {
   font-family: "Roboto Slab", serif;
-  @apply text-4xl;
-}
-
-.headerWhoAmI {
-  font-family: "Roboto Slab", serif;
-  @apply text-base italic text-gray-700;
 }

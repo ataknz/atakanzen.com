@@ -1,6 +1,7 @@
 import { Nav } from "../../components/Nav";
 import { NextSeo } from "next-seo";
 import { ProfileImage } from "../../components/ProfileImage";
+import { getOpenGraphImage } from "../../utils/og-image";
 
 const index = () => {
   return (
@@ -20,14 +21,7 @@ const index = () => {
           site_name: "Atakan Zengin • Work",
           description:
             "Hey! You can find my works and have an idea about what I do.",
-          images: [
-            {
-              url: "https://zengin.me/logoWhiteBackground.png",
-              width: 800,
-              height: 800,
-              alt: "My personal logo.",
-            },
-          ],
+          images: [getOpenGraphImage("Works")],
         }}
       ></NextSeo>
       <Nav></Nav>
