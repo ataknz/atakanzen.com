@@ -7,7 +7,7 @@ const og = () => {
   const { title } = router.query;
 
   return (
-    <div className="flex flex-col items-center pt-60">
+    <div className="flex flex-col items-center pt-52">
       <ProfileImage size={150}></ProfileImage>
       <h1 className="text-9xl font-extrabold text-gray-800 robotoSlab">
         {title}
