@@ -1,6 +1,6 @@
 import { NextSeo } from "next-seo";
 import Hero from "../components/Hero";
-import Link from "next/link";
+import { getOpenGraphImage } from "../utils/og-image";
 
 export default function Home() {
   return (
@@ -20,14 +20,7 @@ export default function Home() {
           title: "Atakan Zengin",
           description:
             "Hey I'm Atakan! I'm a software developer and an art enthusiast",
-          images: [
-            {
-              url: "https://zengin.me/logoWhiteBackground.png",
-              width: 800,
-              height: 800,
-              alt: "My personal logo.",
-            },
-          ],
+          images: [getOpenGraphImage("Atakan Zengin")],
         }}
       ></NextSeo>
       <Hero />

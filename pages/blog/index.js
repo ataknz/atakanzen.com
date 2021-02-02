@@ -2,6 +2,7 @@ import React from "react";
 import { NextSeo } from "next-seo";
 import { Nav } from "../../components/Nav";
 import { ProfileImage } from "../../components/ProfileImage";
+import { getOpenGraphImage } from "../../utils/og-image";
 
 const index = () => {
   return (
@@ -21,14 +22,7 @@ const index = () => {
           site_name: "Atakan Zengin • Blog",
           description:
             "Hey! I write about software, art and sometimes not that boring stuff.",
-          images: [
-            {
-              url: "https://zengin.me/logoWhiteBackground.png",
-              width: 800,
-              height: 800,
-              alt: "My personal logo.",
-            },
-          ],
+          images: [getOpenGraphImage("Blog")],
         }}
       ></NextSeo>
       <Nav></Nav>
