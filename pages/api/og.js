@@ -10,7 +10,7 @@ export default async (req, res) => {
   const page = await browser.newPage({
     viewport: {
       width: 1200,
-      heigh: 630,
+      height: 630,
     },
   });
 
