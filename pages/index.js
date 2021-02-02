@@ -22,6 +22,12 @@ export default function Home() {
             "Hey I'm Atakan! I'm a software developer and an art enthusiast",
           images: [getOpenGraphImage("Atakan Zengin")],
         }}
+        additionalMetaTags={[
+          {
+            name: "keywords",
+            content: "Atakan Zengin, Zengin, Software Development, 3D Art",
+          },
+        ]}
       ></NextSeo>
       <Hero />
       <section className="flex flex-col items-center text-center gap-8 my-6">

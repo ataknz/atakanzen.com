@@ -24,6 +24,13 @@ const index = () => {
             "Hey! I write about software, art and sometimes not that boring stuff.",
           images: [getOpenGraphImage("Blog")],
         }}
+        additionalMetaTags={[
+          {
+            name: "keywords",
+            content:
+              "Atakan Zengin Blog, Zengin Blog, Blog, Technology Blog, Art Blog, Daily Blog",
+          },
+        ]}
       ></NextSeo>
       <Nav></Nav>
       <section className="flex items-center justify-center border-b border-gray-700">
