@@ -93,7 +93,7 @@ const blogPost = ({ blogPost, blocks }) => {
           </ul>
         </div>
       </div>
-      <article className="flex-1 w-full max-w-2xl px-4 pb-6 mx-auto rubik">
+      <article className="flex-1 w-full max-w-2xl pb-6 mx-auto rubik">
         <NotionRenderer blockMap={blocks} />
         <div className="flex w-full justify-center">
           <Link href="/blog">
