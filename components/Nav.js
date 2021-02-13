@@ -9,11 +9,6 @@ export const Nav = () => {
             <a>Home</a>
           </ActiveLink>
         </li>
-        <li>
-          <ActiveLink activeClassName="underline" href="/work">
-            <a>Work</a>
-          </ActiveLink>
-        </li>
         <li className="">
           <ActiveLink activeClassName="underline" href="/blog">
             <a>Blog</a>

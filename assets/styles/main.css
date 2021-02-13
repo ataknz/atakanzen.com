@@ -21,10 +21,14 @@ a:hover {
   @apply no-underline text-blue-900;
 }
 
-a:focus {
-  @apply ring-2 ring-blue-50;
-}
-
 .robotoSlab {
   font-family: "Roboto Slab", serif;
+}
+
+.rubik {
+  font-family: "Rubik", serif;
+}
+
+.notion {
+  font-family: "Rubik", serif !important;
 }

@@ -1,10 +1,26 @@
 import React from "react";
 import { NextSeo } from "next-seo";
 import { Nav } from "../../components/Nav";
+import { Blogs } from "../../components/Blogs";
 import { ProfileImage } from "../../components/ProfileImage";
 import { getOpenGraphImage } from "../../utils/og-image";
+import { getBlogTable } from "../../lib/posts";
 
-const index = () => {
+export const getStaticProps = async () => {
+  const blogs = await getBlogTable(process.env.BLOG_TABLE_ID);
+
+  const publishedBlogs = blogs
+    .filter((post) => process.env.NODE_ENV === "development" || post.published)
+    .sort((a, b) => Number(new Date(b.date)) - Number(new Date(a.date)));
+
+  return {
+    props: {
+      blogs: publishedBlogs,
+    },
+  };
+};
+
+const index = ({ blogs }) => {
   return (
     <>
       <NextSeo
@@ -36,10 +52,7 @@ const index = () => {
       <section className="flex items-center justify-center border-b border-gray-700">
         <ProfileImage size="130"></ProfileImage>
       </section>
-      <div className="flex flex-col items-center my-16">
-        <h1 className="text-9xl">My Blog</h1>
-        <h2 className="text-4xl animate-pulse text-blue-500">soon</h2>
-      </div>
+      <Blogs blogs={blogs}></Blogs>
     </>
   );
 };
