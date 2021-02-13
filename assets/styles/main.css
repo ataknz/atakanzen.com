@@ -18,7 +18,7 @@ a {
 }
 
 a:hover {
-  @apply no-underline text-blue-900;
+  @apply no-underline text-blue-900 bg-blue-50;
 }
 
 .robotoSlab {

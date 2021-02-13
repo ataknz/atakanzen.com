@@ -30,20 +30,19 @@ export default function Home() {
         ]}
       ></NextSeo>
       <Hero />
-      <section className="flex flex-col items-center text-center gap-8 my-6">
-        <p>
+      <section className="flex flex-col items-center text-center mx-auto my-6 max-w-xl">
+        <p className="pb-4">
           Istanbul, Turkey. I'm currently working at an{" "}
           <span className="font-medium">E-commerce</span> platform.
         </p>
-        <p>
+        <p className="pb-4">
           I always want to create the best solutions and products for the
           people. I believe with hard work and passion, I'll be able to
           contribute to our ever-growing technology, and create immersive and
           unique works.
         </p>
         <p>
-          Lastly if you have any enquiries, please don't hesitate to contact me
-          from{" "}
+          If you have any enquiries, please don't hesitate to contact me from{" "}
           <a href="mailto:atakanzzengin@gmail.com" id="link">
             atakanzzengin@gmail.com
           </a>

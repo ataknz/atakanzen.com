@@ -49,7 +49,7 @@ const index = ({ blogs }) => {
         ]}
       ></NextSeo>
       <Nav></Nav>
-      <section className="flex items-center justify-center border-b border-gray-700">
+      <section className="flex items-center justify-center border-b border-gray-200">
         <ProfileImage size="130"></ProfileImage>
       </section>
       <Blogs blogs={blogs}></Blogs>
