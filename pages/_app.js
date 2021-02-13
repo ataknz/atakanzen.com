@@ -1,6 +1,8 @@
 import React from "react";
 import Head from "next/head";
 import "../assets/styles/main.css";
+import "../assets/styles/prism.css";
+import "react-notion/src/styles.css";
 
 export default function App({ Component, pageProps }) {
   return (
