@@ -14,6 +14,14 @@ export default function App({ Component, pageProps }) {
           href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Rubik:ital,wght@0,400;0,500;1,400;1,500&display=swap"
           rel="stylesheet"
         />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-VF5D0S46ET"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-VF5D0S46ET');
+        </script>
       </Head>
       <Component {...pageProps} />
     </>
