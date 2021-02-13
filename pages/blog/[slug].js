@@ -74,8 +74,8 @@ const blogPost = ({ blogPost, blocks }) => {
         ]}
       ></NextSeo>
       <Nav></Nav>
-      <div className="px-4 mt-8 mb-12 md:mt-12 md:mb-18">
-        <h1 className="mb-2 text-2xl font-bold md:text-3xl sm:text-center rubik">
+      <div className="mt-8 px-4 pb-4 mb-12 md:mt-12 md:mb-14 border-b border-gray-200">
+        <h1 className="mb-2 pt-4 text-2xl font-bold md:text-3xl sm:text-center rubik">
           {blogPost.title}
         </h1>
         <div className="text-gray-600 sm:text-center rubik">
@@ -83,14 +83,23 @@ const blogPost = ({ blogPost, blocks }) => {
             {new Date(blogPost.date).toDateString()}
           </time>
         </div>
+        <div className="w-full mt-2">
+          <ul className="flex flex-row sm:justify-center">
+            {Array.from(blogPost.categories).map((category, i) => (
+              <li key={i} className="p-1 text-sm mr-1 bg-blue-50 rounded-md">
+                {category}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
-      <article className="flex-1 w-full max-w-2xl px-4 mx-auto rubik">
+      <article className="flex-1 w-full max-w-2xl px-4 pb-6 mx-auto rubik">
         <NotionRenderer blockMap={blocks} />
-        <Link href="/blog">
-          <a className="text-blue-500 hover:underline p-0 pb-5">
-            Back to blogs
-          </a>
-        </Link>
+        <div className="flex w-full justify-center">
+          <Link href="/blog">
+            <a>Back to blogs</a>
+          </Link>
+        </div>
       </article>
     </>
   );
