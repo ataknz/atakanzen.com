@@ -78,7 +78,7 @@ const blogPost = ({ blogPost, blocks }) => {
         <h1 className="mb-2 pt-4 text-2xl font-bold md:text-3xl sm:text-center rubik">
           {blogPost.title}
         </h1>
-        <div className="text-gray-600 sm:text-center rubik">
+        <div className="text-gray-600 dark:text-gray-400 sm:text-center rubik">
           <time dateTime={new Date(blogPost.date).toDateString()}>
             {new Date(blogPost.date).toDateString()}
           </time>
@@ -86,7 +86,10 @@ const blogPost = ({ blogPost, blocks }) => {
         <div className="w-full mt-2">
           <ul className="flex flex-row sm:justify-center">
             {Array.from(blogPost.categories).map((category, i) => (
-              <li key={i} className="p-1 text-sm mr-1 bg-blue-50 rounded-md">
+              <li
+                key={i}
+                className="p-1 text-sm mr-1 bg-blue-50 dark:bg-chromeYellow dark:text-raisinBlack rounded-md"
+              >
                 {category}
               </li>
             ))}

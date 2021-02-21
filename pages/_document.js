@@ -4,7 +4,7 @@ const gaTrackingID = process.env.GA_TRACKING_ID;
 export default class MyDocument extends Document {
   render() {
     return (
-      <Html>
+      <Html lang="en">
         <Head>
           <script
             async
@@ -19,12 +19,12 @@ export default class MyDocument extends Document {
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
 
-                gtag('config', '${gaTrackingID}');      
+                gtag('config', '${gaTrackingID}');
              `,
             }}
           />
         </Head>
-        <body>
+        <body className="bg-white text-gray-800 dark:bg-raisinBlack dark:text-gray-200">
           <Main />
           <NextScript />
         </body>
