@@ -1,8 +1,10 @@
 import React from "react";
 import Head from "next/head";
+import { ThemeProvider } from "next-themes";
+
 import "../assets/styles/main.css";
-import "../assets/styles/prism.css";
 import "react-notion/src/styles.css";
+import "prismjs/themes/prism-tomorrow.css";
 
 export default function App({ Component, pageProps }) {
   return (
@@ -15,7 +17,9 @@ export default function App({ Component, pageProps }) {
           rel="stylesheet"
         />
       </Head>
-      <Component {...pageProps} />
+      <ThemeProvider attribute="class">
+        <Component {...pageProps} />
+      </ThemeProvider>
     </>
   );
 }

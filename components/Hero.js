@@ -9,10 +9,10 @@ function Hero() {
         <div className="mt-4 flex flex-col items-center">
           <ProfileImage size={130} />
           <h1 className="robotoSlab text-4xl ">Atakan Zengin</h1>
-          <h2 className="robotoSlab italic text-gray-700">
+          <h2 className="robotoSlab tracking-wide text-gray-500 dark:text-gray-500">
             Software Developer &amp; Art Enthusiast
           </h2>
-          <div className="max-w-sm flex">
+          <div className="max-w-sm flex mt-1">
             <a
               className="transform hover:scale-105 mr-1"
               href="http://twitter.com/atakanzzengin"

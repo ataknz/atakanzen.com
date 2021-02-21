@@ -1,10 +1,14 @@
 import ActiveLink from "./ActiveLink";
+import ThemeSwitch from "../components/ThemeSwitch";
 
 export const Nav = () => {
   return (
     <div className="flex items-center justify-center mb-12">
-      <nav className="py-3 bg-gray-50 w-full fixed top-0">
+      <nav className="justify-between px-3 py-3 z-50 bg-white dark:bg-raisinBlack bg-opacity-100 w-full fixed top-0">
         <ul className="flex items-center justify-center">
+          <li className="absolute left-4">
+            <ThemeSwitch />
+          </li>
           <li>
             <ActiveLink activeClassName="underline" href="/">
               <a>Home</a>
