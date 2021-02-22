@@ -5,6 +5,7 @@ import { Blogs } from "../../components/Blogs";
 import { ProfileImage } from "../../components/ProfileImage";
 import { getOpenGraphImage } from "../../utils/og-image";
 import { getBlogTable } from "../../lib/posts";
+import Layout from "../../components/Layout";
 
 export const getStaticProps = async () => {
   const blogs = await getBlogTable(process.env.BLOG_TABLE_ID);
@@ -48,9 +49,9 @@ const index = ({ blogs }) => {
           },
         ]}
       ></NextSeo>
-      <Nav></Nav>
-
-      <Blogs blogs={blogs}></Blogs>
+      <Layout>
+        <Blogs blogs={blogs}></Blogs>
+      </Layout>
     </>
   );
 };

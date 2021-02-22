@@ -1,5 +1,5 @@
 import React from "react";
-import { ProfileImage } from "../components/ProfileImage";
+import ProfileImage from "../components/ProfileImage";
 import { useRouter } from "next/router";
 
 const og = () => {

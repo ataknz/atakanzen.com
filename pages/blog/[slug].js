@@ -5,6 +5,7 @@ import { Nav } from "../../components/Nav";
 import { NotionRenderer } from "react-notion";
 import { NextSeo } from "next-seo";
 import { getOpenGraphImage } from "../../utils/og-image";
+import Layout from "../../components/Layout";
 
 export const getStaticPaths = async () => {
   const blogTable = await getBlogTable(process.env.BLOG_TABLE_ID);
@@ -73,37 +74,38 @@ const blogPost = ({ blogPost, blocks }) => {
           },
         ]}
       ></NextSeo>
-      <Nav></Nav>
-      <div className="mt-8 px-4 pb-4 mb-12 md:mt-12 md:mb-14 border-b border-gray-200">
-        <h1 className="mb-2 pt-4 text-2xl font-bold md:text-3xl sm:text-center rubik">
-          {blogPost.title}
-        </h1>
-        <div className="text-gray-600 dark:text-gray-400 sm:text-center rubik">
-          <time dateTime={new Date(blogPost.date).toDateString()}>
-            {new Date(blogPost.date).toDateString()}
-          </time>
+      <Layout>
+        <div className="mt-8 px-4 pb-4 mb-12 md:mt-12 md:mb-14 border-b border-gray-200">
+          <h1 className="mb-2 pt-4 text-2xl font-bold md:text-3xl sm:text-center rubik">
+            {blogPost.title}
+          </h1>
+          <div className="text-gray-600 dark:text-gray-400 sm:text-center rubik">
+            <time dateTime={new Date(blogPost.date).toDateString()}>
+              {new Date(blogPost.date).toDateString()}
+            </time>
+          </div>
+          <div className="w-full mt-2">
+            <ul className="flex flex-row sm:justify-center">
+              {Array.from(blogPost.categories).map((category, i) => (
+                <li
+                  key={i}
+                  className="p-1 text-sm mr-1 bg-blue-50 dark:bg-chromeYellow dark:text-raisinBlack rounded-md"
+                >
+                  {category}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-        <div className="w-full mt-2">
-          <ul className="flex flex-row sm:justify-center">
-            {Array.from(blogPost.categories).map((category, i) => (
-              <li
-                key={i}
-                className="p-1 text-sm mr-1 bg-blue-50 dark:bg-chromeYellow dark:text-raisinBlack rounded-md"
-              >
-                {category}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-      <article className="flex-1 w-full max-w-2xl pb-6 mx-auto rubik">
-        <NotionRenderer blockMap={blocks} />
-        <div className="flex w-full justify-center">
-          <Link href="/blog">
-            <a>Back to blogs</a>
-          </Link>
-        </div>
-      </article>
+        <article className="flex-1 w-full max-w-2xl pb-6 mx-auto rubik">
+          <NotionRenderer blockMap={blocks} />
+          <div className="flex w-full justify-center">
+            <Link href="/blog">
+              <a>Back to blogs</a>
+            </Link>
+          </div>
+        </article>
+      </Layout>
     </>
   );
 };

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import { useTheme } from "next-themes";
 
-const ThemeSwitch = () => {
+export const ThemeSwitch = () => {
   const [mounted, setMounted] = useState(false);
   const { setTheme } = useTheme();
 
@@ -16,7 +16,6 @@ const ThemeSwitch = () => {
   const onClick = () => {
     checked = !checked;
     setTheme(checked ? "dark" : "light");
-    localStorage.setItem("clicked", "yes");
   };
 
   return (
@@ -25,5 +24,3 @@ const ThemeSwitch = () => {
     </div>
   );
 };
-
-export default ThemeSwitch;
