@@ -1,10 +1,8 @@
-import { ProfileImage } from "./ProfileImage";
-import { Nav } from "./Nav";
+import ProfileImage from "./ProfileImage";
 
-function Hero() {
+export const Hero = () => {
   return (
-    <section className="border-b border-gray-200">
-      <Nav />
+    <section className="border-b border-gray-200 dark:border-gray-500">
       <div className="my-1">
         <div className="mt-4 flex flex-col items-center">
           <ProfileImage size={130} />
@@ -36,6 +34,4 @@ function Hero() {
       </div>
     </section>
   );
-}
-
-export default Hero;
+};

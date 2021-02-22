@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 
-export const ProfileImage = ({ size = 200 }) => {
+const ProfileImage = ({ size = 200 }) => {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme } = useTheme();
   let initialSource =
@@ -13,6 +13,7 @@ export const ProfileImage = ({ size = 200 }) => {
 
   useEffect(() => {
     setMounted(true);
+    console.log(localStorage.getItem("theme"));
   }, []);
 
   if (!mounted) return null;
@@ -42,3 +43,5 @@ export const ProfileImage = ({ size = 200 }) => {
     </div>
   );
 };
+
+export default ProfileImage;
