@@ -3,13 +3,10 @@ import Link from "next/link";
 
 export const Blogs = ({ blogs }) => {
   return (
-    <div>
-      <ul className="flex flex-col items-center my-8">
+    <div className="py-8">
+      <ul className="flex flex-col items-center">
         {blogs.map((blog) => (
-          <li
-            key={blog.id}
-            className="border-b border-blue-200 px-4 transition duration-700 ease-in-out hover:translate-y-1 transform hover:scale-105"
-          >
+          <li key={blog.id} className="border-b border-gray-200 px-4">
             <Link href={`/blog/${blog.slug}`}>
               <a className="my-2 py-4 px-4 -mx-4 dark:hover:bg-gray-800 rounded-md block">
                 <div className="flex justify-between">
