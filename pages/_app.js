@@ -5,6 +5,7 @@ import { ThemeProvider } from "next-themes";
 import "../assets/styles/main.css";
 import "react-notion/src/styles.css";
 import "prismjs/themes/prism-tomorrow.css";
+import Provider from "../context/Provider";
 
 export default function App({ Component, pageProps }) {
   return (
@@ -17,8 +18,14 @@ export default function App({ Component, pageProps }) {
           rel="stylesheet"
         />
       </Head>
-      <ThemeProvider attribute="class">
-        <Component {...pageProps} />
+      <ThemeProvider
+        enableSystem={true}
+        defaultTheme="system"
+        attribute="class"
+      >
+        <Provider>
+          <Component {...pageProps} />
+        </Provider>
       </ThemeProvider>
     </>
   );
