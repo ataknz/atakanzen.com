@@ -101,7 +101,7 @@ const blogPost = ({ blogPost, blocks }) => {
           <NotionRenderer blockMap={blocks} />
           <div className="flex w-full justify-center">
             <Link href="/blog">
-              <a>Back to blogs</a>
+              <a>Back to blog</a>
             </Link>
           </div>
         </article>
