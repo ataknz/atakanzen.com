@@ -3,7 +3,7 @@ import { Nav } from "./Nav";
 
 const Layout = ({ children, index }) => {
   return (
-    <div className="bg-red-500">
+    <div>
       <Nav />
       {index && <Hero />}
       {children}
