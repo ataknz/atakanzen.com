@@ -16,18 +16,24 @@ export const Hero = () => {
           <div className="max-w-sm flex mt-1">
             <a
               className="transform hover:scale-105 mr-1"
+              target="_blank"
+              rel="noopener noreferrer"
               href="http://twitter.com/atakanzzengin"
             >
               Twitter
             </a>
             <a
               className="transform hover:scale-105 mr-1"
+              target="_blank"
+              rel="noopener noreferrer"
               href="http://github.com/ataknz"
             >
               Github
             </a>
             <a
               className="transform hover:scale-105"
+              target="_blank"
+              rel="noopener noreferrer"
               href="http://linkedin.com/in/ataknz"
             >
               Linkedin
