@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://zengin.me/sitemap.xml
