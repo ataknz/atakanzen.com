@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { getBlogTable, getSinglePage } from "../../lib/posts";
+import { getAllPosts, getSinglePost } from "../../lib/posts";
 import { Nav } from "../../components/Nav";
 import { NotionRenderer } from "react-notion";
 import { NextSeo } from "next-seo";
@@ -8,7 +8,7 @@ import { getOpenGraphImage } from "../../utils/og-image";
 import Layout from "../../components/Layout";
 
 export const getStaticPaths = async () => {
-  const blogTable = await getBlogTable(process.env.BLOG_TABLE_ID);
+  const blogTable = await getAllPosts(process.env.BLOG_TABLE_ID);
 
   const paths = blogTable
     .filter((blog) => process.env.NODE_ENV === "development" || blog.published)
@@ -27,7 +27,7 @@ export const getStaticProps = async ({ params }) => {
     throw Error("No slug given");
   }
 
-  const table = await getBlogTable(process.env.BLOG_TABLE_ID);
+  const table = await getAllPosts(process.env.BLOG_TABLE_ID);
 
   const blogPost = table.find((blog) => blog.slug === slug);
 
@@ -38,7 +38,7 @@ export const getStaticProps = async ({ params }) => {
     throw Error(`Blog post for ${slug} could not be found.`);
   }
 
-  const blocks = await getSinglePage(blogPost.id);
+  const blocks = await getSinglePost(blogPost.id);
 
   return {
     props: {

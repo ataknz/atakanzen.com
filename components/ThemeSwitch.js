@@ -4,14 +4,14 @@ import { useTheme } from "next-themes";
 
 export const ThemeSwitch = () => {
   const [mounted, setMounted] = useState(false);
-  const { setTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
 
   useEffect(() => setMounted(true), []);
 
   // Checking if component is mounted, since localStorage is not accesible until then.
   if (!mounted) return null;
 
-  let checked = localStorage.getItem("theme") === "light" ? false : true;
+  let checked = resolvedTheme === "light" ? false : true;
 
   const onClick = () => {
     checked = !checked;

@@ -4,11 +4,11 @@ import { Nav } from "../../components/Nav";
 import { Blogs } from "../../components/Blogs";
 import { ProfileImage } from "../../components/ProfileImage";
 import { getOpenGraphImage } from "../../utils/og-image";
-import { getBlogTable } from "../../lib/posts";
+import { getAllPosts } from "../../lib/posts";
 import Layout from "../../components/Layout";
 
 export const getStaticProps = async () => {
-  const blogs = await getBlogTable(process.env.BLOG_TABLE_ID);
+  const blogs = await getAllPosts(process.env.BLOG_TABLE_ID);
 
   const publishedBlogs = blogs
     .filter((post) => process.env.NODE_ENV === "development" || post.published)
