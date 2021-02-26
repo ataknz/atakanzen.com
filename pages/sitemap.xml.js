@@ -9,7 +9,7 @@ const createSitemap = (posts) => `<?xml version="1.0" encoding="UTF-8"?>
           return `
                 <url>
                     <loc>${`${process.env.BASE_URL}/blog/${slug}`}</loc>
-                    <lastmod>${new Date(date)}</lastmod>
+                    <lastmod>${date}</lastmod>
                 </url>
             `;
         }
