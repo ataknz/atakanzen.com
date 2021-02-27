@@ -51,9 +51,9 @@ const index = ({ categories }) => {
           <h2 className="text-gray-800 dark:text-chromeYellow text-center text-4xl w-full pb-1 border-b border-gray-200 mt-5">
             Categories
           </h2>
-          <ul className="mt-7">
+          <ul className="mt-4">
             {categories.map((category, i) => (
-              <li key={i} className="border-b border-gray-200 pb-1">
+              <li key={i} className="border-b border-gray-200 pb-1 mt-1">
                 <Link href={`blog/${category}`}>
                   <a>{String(category).toUpperCase()}</a>
                 </Link>

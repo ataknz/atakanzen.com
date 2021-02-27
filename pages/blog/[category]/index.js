@@ -2,17 +2,15 @@ import React from "react";
 import { NextSeo } from "next-seo";
 import { Blogs } from "../../../components/Blogs";
 import { getOpenGraphImage } from "../../../utils/og-image";
-import { getAllPosts } from "../../../lib/posts";
+import { getAllPosts, getAllCategories } from "../../../lib/posts";
 import { capitalize } from "../../../utils/common";
 import Layout from "../../../components/Layout";
 import { useRouter } from "next/router";
 
 export const getStaticPaths = async () => {
-  const blogs = await getAllPosts(process.env.BLOG_TABLE_ID);
+  const categories = await getAllCategories();
 
-  const paths = blogs
-    .filter((post) => process.env.NODE_ENV === "development" || post.published)
-    .map((post) => `/blog/${post.category}`);
+  const paths = categories.map((category) => `/blog/${category}`);
 
   return {
     paths,
