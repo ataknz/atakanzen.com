@@ -15,7 +15,7 @@ export default async (req, res) => {
   });
 
   const url = `https://zengin.me/og?title=${title}`;
-  await page.goto(url, { waitUntil: "domcontentloaded" });
+  await page.goto(url);
   const data = await page.screenshot({
     type: "png",
   });
