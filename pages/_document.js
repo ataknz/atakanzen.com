@@ -19,7 +19,9 @@ export default class MyDocument extends Document {
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
 
-                gtag('config', '${gaTrackingID}');
+                gtag('config', '${gaTrackingID}', {
+                  page_path: window.location.pathname,
+                });
              `,
             }}
           />

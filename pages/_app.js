@@ -1,13 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
+
 import Head from "next/head";
+import { useRouter } from "next/router";
 import { ThemeProvider } from "next-themes";
+import Provider from "../context/Provider";
+import * as gtag from "../utils/gtag";
 
 import "../assets/styles/main.css";
 import "react-notion/src/styles.css";
 import "prismjs/themes/prism-tomorrow.css";
-import Provider from "../context/Provider";
 
 export default function App({ Component, pageProps }) {
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      gtag.pageview(url);
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
+
   return (
     <>
       <Head>
