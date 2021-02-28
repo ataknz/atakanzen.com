@@ -1,23 +1,30 @@
 import Image from "next/image";
+import Context from "../context/Context";
 
-const ProfileImage = ({ size = 200, src }) => {
+const ProfileImage = ({ size = 200 }) => {
   return (
-    <div
-      className="relative rounded-full"
-      style={{
-        width: size,
-        height: size,
-      }}
-    >
-      <Image
-        className="rounded-full"
-        src={src}
-        alt={"My logo."}
-        height={size}
-        width={size}
-        quality={75}
-      ></Image>
-    </div>
+    <>
+      <Context.Consumer>
+        {(context) => (
+          <div
+            className="relative rounded-full"
+            style={{
+              width: size,
+              height: size,
+            }}
+          >
+            <Image
+              className="rounded-full"
+              src={context.imageSource}
+              alt={"My logo."}
+              height={size}
+              width={size}
+              quality={75}
+            ></Image>
+          </div>
+        )}
+      </Context.Consumer>
+    </>
   );
 };
 
