@@ -1,23 +1,22 @@
-import * as playwright from "playwright-aws-lambda";
+import playwright from "playwright";
 
 export default async (req, res) => {
   const {
     query: { title },
   } = req;
 
-  const browser = await playwright.launchChromium();
-
-  const page = await browser.newPage({
-    viewport: {
-      width: 1200,
-      height: 630,
-    },
+  const browser = await playwright["chromium"].launch();
+  const context = await browser.newContext({
+    viewport: { width: 1200, height: 630 },
   });
 
+  const page = await context.newPage();
+
   const url = `https://zengin.me/og?title=${title}`;
-  await page.goto(url, { waitUntil: "load" });
-  const element = await page.waitForSelector("img");
-  console.log(`Element loaded: ${element}`);
+
+  await page.goto(url);
+  await page.waitForSelector("img");
+
   const data = await page.screenshot({
     type: "png",
   });
