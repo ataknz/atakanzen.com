@@ -8,7 +8,7 @@ const og = () => {
 
   return (
     <div className="flex flex-col items-center pt-28">
-      <ProfileImage size={125}></ProfileImage>
+      <ProfileImage size={200}></ProfileImage>
       <h1 className="text-7xl text-center font-extrabold text-gray-800 dark:text-chromeYellow robotoSlab">
         {title}
       </h1>
