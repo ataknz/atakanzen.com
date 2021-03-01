@@ -8,6 +8,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@fontsource/open-sans": "^4.2.1",
+    "@fontsource/roboto-slab": "^4.2.1",
     "autoprefixer": "^10.2.4",
     "axios": "^0.21.1",
     "next": "^10.0.6",
