@@ -6,7 +6,7 @@ html,
 body,
 body > div {
   @apply container mx-auto max-w-screen-lg min-h-full;
-  font-family: "Rubik", serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 * {
@@ -14,7 +14,7 @@ body > div {
 }
 
 a {
-  @apply no-underline text-blue-600 dark:text-chromeYellow font-medium rounded p-1;
+  @apply no-underline text-blue-600 dark:text-chromeYellow font-semibold rounded p-1;
 }
 
 a:hover {
@@ -25,13 +25,22 @@ a:hover {
   font-family: "Roboto Slab", serif;
 }
 
-.rubik {
-  font-family: "Rubik", serif;
+.openSans {
+  font-family: "Open Sans", serif;
 }
 
 .notion {
-  @apply text-gray-800 dark:text-gray-200;
-  font-family: "Rubik", serif !important;
+  @apply text-gray-800 dark:text-gray-200 font-medium;
+}
+
+.notion-text {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+.notion-h1,
+.notion-h2,
+.notion-h3 {
+  font-family: "Roboto Slab", serif !important;
 }
 
 .notion-bookmark {

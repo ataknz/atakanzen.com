@@ -73,15 +73,15 @@ const blogPost = ({ post, blocks }) => {
       ></NextSeo>
       <Layout>
         <div className="mt-8 px-4 pb-4 mb-12 md:mt-12 md:mb-14 border-b border-gray-200">
-          <h1 className="mb-2 pt-4 text-2xl font-bold md:text-3xl sm:text-center rubik">
+          <h1 className="mb-2 pt-4 text-2xl font-semibold md:text-3xl sm:text-center openSans">
             {post.title}
           </h1>
-          <div className="text-gray-600 dark:text-gray-400 sm:text-center rubik">
+          <div className="text-gray-600 dark:text-gray-400 sm:text-center font-extralight robotoSlab">
             <time dateTime={new Date(post.date).toDateString()}>
               {new Date(post.date).toDateString()}
             </time>
           </div>
-          <div className="flex justify-center mt-2">
+          <div className="flex sm:justify-center mt-2">
             <Link href={`/blog/${post.category}`}>
               <a className="p-1 text-sm bg-blue-50 dark:bg-chromeYellow dark:text-raisinBlack rounded-md">
                 {capitalize(post.category)}
@@ -89,7 +89,7 @@ const blogPost = ({ post, blocks }) => {
             </Link>
           </div>
         </div>
-        <article className="flex-1 w-full max-w-2xl pb-6 mx-auto rubik">
+        <article className="flex-1 w-full max-w-2xl pb-6 mx-auto">
           <NotionRenderer blockMap={blocks} />
           <div className="flex flex-col w-full items-center">
             <Link href="/blog">

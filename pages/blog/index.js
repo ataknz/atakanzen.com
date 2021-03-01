@@ -48,7 +48,7 @@ const index = ({ categories }) => {
       ></NextSeo>
       <Layout>
         <div className="flex flex-col items-center justify-center w-full">
-          <h2 className="text-gray-800 dark:text-chromeYellow text-center text-4xl w-full pb-1 border-b border-gray-200 mt-5">
+          <h2 className="text-gray-800 dark:text-gray-200 text-center robotoSlab font-extralight text-4xl w-full pb-1 border-b border-gray-200 mt-5">
             Categories
           </h2>
           <ul className="mt-4">

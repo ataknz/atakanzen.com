@@ -10,14 +10,14 @@ export const Blogs = ({ blogs }) => {
             <Link href={`/blog/${blog.category}/${blog.slug}`}>
               <a className="my-2 py-4 px-4 -mx-4 dark:hover:bg-gray-800 rounded-md block">
                 <div className="flex justify-between">
-                  <span className="text-blue-500 dark:text-gray-200 rubik">
+                  <span className="text-blue-500 dark:text-gray-200 openSans">
                     {blog.title}
                   </span>
-                  <span className="text-blue-500 dark:text-gray-200 rubik">
+                  <span className="text-blue-500 dark:text-gray-200 openSans">
                     {new Date(blog.date).toDateString()}
                   </span>
                 </div>
-                <div className="mt-2 text-gray-700 dark:text-chromeYellow mr-4 rubik">
+                <div className="mt-2 text-gray-700 dark:text-chromeYellow mr-4 openSans">
                   {blog.excerpt}
                 </div>
               </a>
