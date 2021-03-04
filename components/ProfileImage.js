@@ -7,7 +7,7 @@ const ProfileImage = ({ size = 200 }) => {
       <Context.Consumer>
         {(context) => (
           <div
-            className="relative rounded-full"
+            className="relative rounded-full mt-1"
             style={{
               width: size,
               height: size,
