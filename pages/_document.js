@@ -6,7 +6,35 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+          <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png?v=693qL8BNpN"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon-32x32.png?v=693qL8BNpN"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png?v=693qL8BNpN"
+          />
+          <link rel="manifest" href="/site.webmanifest?v=693qL8BNpN" />
+          <link
+            rel="mask-icon"
+            href="/safari-pinned-tab.svg?v=693qL8BNpN"
+            color="#1b1b1e"
+          />
+          <link rel="shortcut icon" href="/favicon.ico?v=693qL8BNpN" />
+          <meta name="msapplication-TileColor" content="#faa916" />
+          <meta name="theme-color" content="#ffffff" />
+
           <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${gaTrackingID}`}
