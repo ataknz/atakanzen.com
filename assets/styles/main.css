@@ -38,12 +38,6 @@ a:hover {
   font-family: "Open Sans", sans-serif !important;
 }
 
-.notion-h1,
-.notion-h2,
-.notion-h3 {
-  font-family: "Roboto Slab", serif !important;
-}
-
 .notion-bookmark {
   @apply bg-gray-50 dark:bg-gray-50;
 }
