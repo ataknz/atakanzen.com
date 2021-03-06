@@ -6,7 +6,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+          <meta charSet="utf-8" />
 
           <link
             rel="apple-touch-icon"
