@@ -2,15 +2,12 @@ import { NextSeo } from "next-seo";
 import Link from "next/link";
 import React from "react";
 import Layout from "../../components/Layout";
-import { getAllPosts } from "../../lib/posts";
+import { getAllCategories } from "../../lib/posts";
 import { getOpenGraphImage } from "../../utils/og-image";
+import { capitalize } from "../../utils/common";
 
 export const getStaticProps = async () => {
-  const blogs = await getAllPosts(process.env.BLOG_TABLE_ID);
-
-  const categories = blogs
-    .filter((blog) => process.env.NODE_ENV === "development" || blog.published)
-    .map((blog) => blog.category);
+  const categories = await getAllCategories();
 
   return {
     props: {
@@ -51,11 +48,13 @@ const index = ({ categories }) => {
           <h2 className="text-gray-800 dark:text-gray-200 text-center robotoSlab font-extralight text-4xl w-full pb-1 border-b border-gray-200 mt-5">
             Categories
           </h2>
-          <ul className="mt-4">
+          <ul className="grid grid-cols-2 gap-4 md:gap-8 mt-4">
             {categories.map((category, i) => (
-              <li key={i} className="border-b border-gray-200 pb-1 mt-1">
+              <li key={i} className="p-1">
                 <Link href={`blog/${category}`}>
-                  <a>{String(category).toUpperCase()}</a>
+                  <a className="text-3xl md:text-3xl">
+                    {capitalize(String(category))}
+                  </a>
                 </Link>
               </li>
             ))}

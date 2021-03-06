@@ -13,7 +13,7 @@ export const Hero = () => {
           </h2>
           <div className="max-w-sm flex mt-1">
             <a
-              className="transform hover:scale-105 mr-1"
+              className="transform hover:scale-105 mr-3"
               target="_blank"
               rel="noopener noreferrer"
               href="http://twitter.com/atakanzzengin"
@@ -21,7 +21,7 @@ export const Hero = () => {
               Twitter
             </a>
             <a
-              className="transform hover:scale-105 mr-1"
+              className="transform hover:scale-105 mr-3"
               target="_blank"
               rel="noopener noreferrer"
               href="http://github.com/ataknz"

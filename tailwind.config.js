@@ -31,6 +31,7 @@ module.exports = {
       cyan: colors.cyan,
       yellow: colors.amber,
       chromeYellow: "#faa916",
+      chelseaGem: "#a06903",
     },
   },
   variants: {
