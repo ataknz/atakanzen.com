@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* General Styles */
+
 html,
 body,
 body > div {
@@ -21,6 +23,8 @@ a:hover {
   @apply no-underline text-blue-900 dark:text-chelseaGem;
 }
 
+/* Font Styles */
+
 .robotoSlab {
   font-family: "Roboto Slab", serif;
 }
@@ -28,6 +32,8 @@ a:hover {
 .openSans {
   font-family: "Open Sans", serif;
 }
+
+/* Notion Styles */
 
 .notion {
   @apply text-gray-800 dark:text-gray-200 font-medium;
@@ -64,4 +70,15 @@ a:hover {
 
 .notion-inline-code {
   @apply text-blue-600 dark:text-chromeYellow !important;
+}
+
+/* PrismJS Styles */
+
+.toolbar-item {
+  @apply p-1 !important;
+  font-family: "Open Sans", sans-serif !important;
+}
+
+pre[class*="language-"].line-numbers {
+  @apply pl-9 md:pl-10 !important;
 }
