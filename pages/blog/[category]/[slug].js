@@ -95,7 +95,7 @@ const blogPost = ({ post, blocks }) => {
             </Link>
           </div>
         </div>
-        <article className="flex-1 w-full max-w-2xl md:max-w-3xl pb-6 mx-auto line-numbers">
+        <article className="flex-1 w-full max-w-2xl md:max-w-3xl pb-6 mx-auto line-numbers match-braces">
           <NotionRenderer blockMap={blocks} />
           <div className="flex flex-col w-full items-center">
             <Link href="/blog">
