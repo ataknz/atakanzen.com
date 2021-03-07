@@ -78,3 +78,11 @@ a:hover {
   @apply p-1 !important;
   font-family: "Open Sans", sans-serif !important;
 }
+
+.url-link {
+  text-decoration: underline;
+}
+
+.email-link {
+  text-decoration: underline;
+}
