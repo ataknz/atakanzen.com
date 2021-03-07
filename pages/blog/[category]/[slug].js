@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import { getAllPosts, getSinglePost } from "../../../lib/posts";
 import { NotionRenderer } from "react-notion";
@@ -6,6 +6,9 @@ import { NextSeo } from "next-seo";
 import { getOpenGraphImage } from "../../../utils/og-image";
 import Layout from "../../../components/Layout";
 import { capitalize } from "../../../utils/common";
+
+import Prism from "prismjs";
+import "prismjs/themes/prism-tomorrow.css";
 
 export const getStaticPaths = async () => {
   const blogTable = await getAllPosts(process.env.BLOG_TABLE_ID);
@@ -46,6 +49,10 @@ export const getStaticProps = async ({ params }) => {
 };
 
 const blogPost = ({ post, blocks }) => {
+  useEffect(() => {
+    Prism.highlightAll();
+  });
+
   return (
     <>
       <NextSeo

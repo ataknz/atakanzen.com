@@ -7,12 +7,10 @@ import * as gtag from "../utils/gtag";
 
 import "../assets/styles/main.css";
 import "react-notion/src/styles.css";
-import "prismjs/themes/prism-tomorrow.css";
 
 import "@fontsource/open-sans";
 import "@fontsource/open-sans/600.css";
 
-import "@fontsource/roboto-slab";
 import "@fontsource/roboto-slab/200.css";
 
 export default function App({ Component, pageProps }) {
