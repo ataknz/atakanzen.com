@@ -8,7 +8,6 @@ import Layout from "../../../components/Layout";
 import { capitalize } from "../../../utils/common";
 
 import Prism from "prismjs";
-import "prismjs/themes/prism-tomorrow.css";
 
 export const getStaticPaths = async () => {
   const blogTable = await getAllPosts(process.env.BLOG_TABLE_ID);
