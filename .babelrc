@@ -10,7 +10,8 @@
           "autolinker",
           "copy-to-clipboard",
           "autoloader",
-          "show-language"
+          "show-language",
+          "match-braces"
         ],
         "theme": "tomorrow",
         "css": true
