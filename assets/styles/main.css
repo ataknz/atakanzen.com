@@ -78,7 +78,3 @@ a:hover {
   @apply p-1 !important;
   font-family: "Open Sans", sans-serif !important;
 }
-
-pre[class*="language-"].line-numbers {
-  @apply pl-9 md:pl-10 !important;
-}
