@@ -23,6 +23,8 @@ a:hover {
   @apply no-underline text-blue-900 dark:text-chelseaGem;
 }
 
+/* General Styles End */
+
 /* Font Styles */
 
 .robotoSlab {
@@ -32,6 +34,8 @@ a:hover {
 .openSans {
   font-family: "Open Sans", serif;
 }
+
+/* Font Styles End */
 
 /* Notion Styles */
 
@@ -68,9 +72,15 @@ a:hover {
   @apply my-1 !important;
 }
 
+.notion-code {
+  @apply bg-blue-50 dark:bg-mineShaft !important;
+}
+
 .notion-inline-code {
   @apply text-blue-600 dark:text-chromeYellow !important;
 }
+
+/* Notion Styles End */
 
 /* PrismJS Styles */
 
@@ -86,3 +96,21 @@ a:hover {
 .email-link {
   text-decoration: underline;
 }
+
+code[class*="language-"],
+pre[class*="language-"] {
+  @apply text-raisinBlack dark:text-gray-300 !important;
+}
+
+.token.punctuation {
+  @apply text-gray-500 dark:text-gray-300 !important;
+}
+
+div.code-toolbar > .toolbar a,
+div.code-toolbar > .toolbar button,
+div.code-toolbar > .toolbar span {
+  background-color: #f5f2f0 !important;
+  color: #1b1b1e !important;
+}
+
+/* PrismJS Styles End */

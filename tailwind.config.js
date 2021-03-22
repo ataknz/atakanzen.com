@@ -20,6 +20,7 @@ module.exports = {
     colors: {
       black: colors.black,
       raisinBlack: "#1b1b1e",
+      mineShaft: "#2d2d2d",
       white: colors.white,
       gray: colors.blueGray,
       red: colors.rose,
