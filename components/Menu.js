@@ -3,7 +3,7 @@ import { ActiveLink } from "./ActiveLink";
 
 const Menu = () => {
   return (
-    <div className="h-screen w-full fixed flex flex-col items-end justify-center bg-white dark:bg-raisinBlack z-40">
+    <div className="h-screen -mt-12 w-full fixed flex flex-col items-end justify-center bg-white dark:bg-raisinBlack z-40">
       <ul className="text-5xl pr-10">
         <li className="mb-9">
           <ActiveLink activeClassName="underline" href="/">

@@ -2,7 +2,7 @@ import ProfileImage from "./ProfileImage";
 
 export const Hero = () => {
   return (
-    <section className="border-b border-gray-200 dark:border-gray-500">
+    <section className="border-b border-gray-200 dark:border-gray-500 mt-12">
       <div className="my-1">
         <div className="mt-4 flex flex-col items-center">
           <ProfileImage size={130} />
