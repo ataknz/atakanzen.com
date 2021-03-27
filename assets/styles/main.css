@@ -23,6 +23,31 @@ a:hover {
   @apply no-underline text-blue-900 dark:text-chelseaGem;
 }
 
+#__next-build-watcher {
+  z-index: 1 !important;
+}
+
+.burger {
+  @apply md:hidden flex flex-col justify-between h-5 w-8 cursor-pointer;
+}
+
+.burger-meat {
+  height: 0.2rem;
+  @apply transition duration-150 ease-in rounded-sm w-8 bg-raisinBlack dark:bg-gray-50;
+}
+
+.active .meat-1 {
+  @apply transform  translate-y-2;
+}
+
+.active .meat-2 {
+  @apply opacity-0;
+}
+
+.active .meat-3 {
+  @apply transform -translate-y-2;
+}
+
 /* General Styles End */
 
 /* Font Styles */

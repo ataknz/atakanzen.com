@@ -5,8 +5,12 @@ const Layout = ({ children, index }) => {
   return (
     <>
       <Nav />
-      {index && <Hero />}
-      {children}
+      {index && (
+        <div className="mt-12">
+          <Hero />
+        </div>
+      )}
+      {<div className="mt-12">{children}</div>}
     </>
   );
 };

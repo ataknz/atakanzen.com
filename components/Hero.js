@@ -1,4 +1,3 @@
-import Context from "../context/Context";
 import ProfileImage from "./ProfileImage";
 
 export const Hero = () => {
