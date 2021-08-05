@@ -1,6 +1,6 @@
-import { NextSeo } from "next-seo";
-import Layout from "../components/Layout";
-import { getOpenGraphImage } from "../utils/og-image";
+import { NextSeo } from 'next-seo'
+import Layout from '../components/Layout'
+import { getOpenGraphImage } from '../utils/og-image'
 
 export default function Home() {
   return (
@@ -9,30 +9,30 @@ export default function Home() {
         title="Atakan Zengin • Software &amp; Art"
         titleTemplate="%s"
         description="Hey I'm Atakan! I'm a software developer and an art enthusiast."
-        canonical="https://zengin.me"
+        canonical="https://atakanzen.com"
         twitter={{
-          handle: "@atakanzzengin",
-          cardType: "summary_large_image",
+          handle: '@atakanzzengin',
+          cardType: 'summary_large_image',
         }}
         openGraph={{
-          type: "website",
-          url: "https://zengin.me",
-          title: "Atakan Zengin",
+          type: 'website',
+          url: 'https://atakanzen.com',
+          title: 'Atakan Zengin',
           description:
             "Hey I'm Atakan! I'm a software developer and an art enthusiast",
-          images: [getOpenGraphImage("Atakan Zengin")],
+          images: [getOpenGraphImage('Atakan Zengin')],
         }}
         additionalMetaTags={[
           {
-            name: "keywords",
-            content: "Atakan Zengin, Zengin, Software Development, 3D Art",
+            name: 'keywords',
+            content: 'Atakan Zengin, Zengin, Software Development, 3D Art',
           },
         ]}
       ></NextSeo>
       <Layout index={true}>
         <section className="flex flex-col items-center text-center mx-auto my-6 max-w-xl">
           <p className="pb-4">
-            Istanbul, Turkey. I'm currently working at an{" "}
+            Istanbul, Turkey. I'm currently working at an{' '}
             <span className="font-medium">E-commerce</span> platform.
           </p>
           <p className="pb-4">
@@ -42,7 +42,7 @@ export default function Home() {
             unique works.
           </p>
           <p>
-            If you have any enquiries, please don't hesitate to contact me from{" "}
+            If you have any enquiries, please don't hesitate to contact me from{' '}
             <a href="mailto:atakanzzengin@gmail.com" id="link">
               atakanzzengin@gmail.com
             </a>
@@ -50,5 +50,5 @@ export default function Home() {
         </section>
       </Layout>
     </>
-  );
+  )
 }
