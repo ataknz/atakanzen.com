@@ -1,4 +1,4 @@
-import ProfileImage from "./ProfileImage";
+import ProfileImage from './ProfileImage'
 
 export const Hero = () => {
   return (
@@ -15,7 +15,7 @@ export const Hero = () => {
               className="transform hover:scale-105 mr-3"
               target="_blank"
               rel="noopener noreferrer"
-              href="http://twitter.com/atakanzzengin"
+              href="http://twitter.com/atakanzen_"
             >
               Twitter
             </a>
@@ -39,5 +39,5 @@ export const Hero = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
