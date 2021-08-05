@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
 import Link from 'next/link'
-import { getAllPosts, getSinglePost } from '../../../lib/posts'
+import { getAllPosts, getSinglePost } from '../../lib/posts'
 import { NotionRenderer } from 'react-notion'
 import { NextSeo } from 'next-seo'
-import { getOpenGraphImage } from '../../../utils/og-image'
-import Layout from '../../../components/Layout'
-import { capitalize } from '../../../utils/common'
+import { getOpenGraphImage } from '../../utils/og-image'
+import Layout from '../../components/Layout'
+import { capitalize } from '../../utils/common'
 
 import Prism from 'prismjs'
 
@@ -14,7 +14,7 @@ export const getStaticPaths = async () => {
 
   const paths = blogTable
     .filter((blog) => process.env.NODE_ENV === 'development' || blog.published)
-    .map((blog) => `/blog/${blog.category}/${blog.slug}`)
+    .map((blog) => `/blog/${blog.slug}`)
 
   return {
     paths,
@@ -68,7 +68,7 @@ const blogPost = ({ post, blocks }) => {
           handle: '@atakanzzengin',
           cardType: 'summary_large_image',
         }}
-        canonical={`https://atakanzen.com/blog/${post.category}/${post.slug}`}
+        canonical={`https://atakanzen.com/blog/${post.slug}`}
         titleTemplate="%s • Atakan Zengin • Blog"
         additionalMetaTags={[
           {
@@ -78,21 +78,19 @@ const blogPost = ({ post, blocks }) => {
         ]}
       ></NextSeo>
       <Layout>
-        <div className="mt-8 px-4 pb-4 mb-12 md:mt-12 md:mb-14 border-b border-gray-200">
-          <h1 className="mb-2 pt-4 text-2xl font-semibold md:text-3xl sm:text-center openSans">
+        <div className="mt-12 pb-4 mb-2 md:mt-12 border-b border-gray-200">
+          <h1 className="mb-2 pt-4 text-4xl font-semibold md:text-4xl sm:text-center openSans">
             {post.title}
           </h1>
-          <div className="text-gray-600 dark:text-gray-400 sm:text-center font-extralight robotoSlab">
+          <div className="text-gray-600 dark:text-gray-400 sm:text-center robotoSlab">
             <time dateTime={new Date(post.date).toDateString()}>
               {new Date(post.date).toDateString()}
             </time>
           </div>
           <div className="flex sm:justify-center mt-2">
-            <Link href={`/blog/${post.category}`}>
-              <a className="p-1 text-sm bg-blue-50 dark:bg-chromeYellow dark:text-raisinBlack rounded-md">
-                {capitalize(post.category)}
-              </a>
-            </Link>
+            <p className="p-1 text-sm bg-blue-50 dark:bg-chromeYellow dark:text-raisinBlack rounded-sm">
+              {capitalize(post.category)}
+            </p>
           </div>
         </div>
         <article className="flex-1 w-full max-w-2xl md:max-w-3xl pb-6 mx-auto line-numbers match-braces">
@@ -100,9 +98,6 @@ const blogPost = ({ post, blocks }) => {
           <div className="flex flex-col w-full items-center">
             <Link href="/blog">
               <a className="pb-1">Back to blog</a>
-            </Link>
-            <Link href={`/blog/${post.category}`}>
-              <a>{`Back to ${post.category} blog`}</a>
             </Link>
           </div>
         </article>

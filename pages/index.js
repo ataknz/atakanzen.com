@@ -11,7 +11,7 @@ export default function Home() {
         description="Hey I'm Atakan! I'm a software developer and an art enthusiast."
         canonical="https://atakanzen.com"
         twitter={{
-          handle: '@atakanzzengin',
+          handle: '@atakanzen_',
           cardType: 'summary_large_image',
         }}
         openGraph={{
@@ -30,7 +30,7 @@ export default function Home() {
         ]}
       ></NextSeo>
       <Layout index={true}>
-        <section className="flex flex-col items-center text-center mx-auto my-6 max-w-xl">
+        <section className="flex flex-col items-center text-center mx-auto max-w-xl mt-3">
           <p className="pb-4">
             Istanbul, Turkey. I'm currently working at an{' '}
             <span className="font-medium">E-commerce</span> platform.
