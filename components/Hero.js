@@ -23,7 +23,7 @@ export const Hero = () => {
               className="transform hover:scale-105 mr-3"
               target="_blank"
               rel="noopener noreferrer"
-              href="http://github.com/ataknz"
+              href="http://github.com/atakanzen"
             >
               Github
             </a>
@@ -31,7 +31,7 @@ export const Hero = () => {
               className="transform hover:scale-105"
               target="_blank"
               rel="noopener noreferrer"
-              href="http://linkedin.com/in/ataknz"
+              href="http://linkedin.com/in/atakanzen"
             >
               Linkedin
             </a>
