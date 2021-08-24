@@ -65,7 +65,7 @@ const blogPost = ({ post, blocks }) => {
           },
         }}
         twitter={{
-          handle: '@atakanzzengin',
+          handle: '@atakanzen_',
           cardType: 'summary_large_image',
         }}
         canonical={`https://atakanzen.com/blog/${post.slug}`}
