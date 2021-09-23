@@ -7,10 +7,10 @@ export const Hero = () => {
         <div className="mt-4 flex flex-col items-center">
           <ProfileImage size={130} />
           <h1 className="robotoSlab text-4xl ">Atakan Zengin</h1>
-          <h2 className="robotoSlab font-extralight tracking-wide text-gray-500 dark:text-gray-500">
-            Software Developer &amp; Art Enthusiast
+          <h2 className="robotoSlab font-extralight tracking-wide text-gray-500 dark:text-gray-500 mt-2">
+            Software Engineer &amp; Art Enthusiast
           </h2>
-          <div className="max-w-sm flex mt-1">
+          <div className="max-w-sm flex mt-2">
             <a
               className="transform hover:scale-105 mr-3"
               target="_blank"
