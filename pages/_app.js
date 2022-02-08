@@ -12,6 +12,7 @@ import "@fontsource/open-sans";
 import "@fontsource/open-sans/600.css";
 
 import "@fontsource/roboto-slab/200.css";
+import Script from "next/script";
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
@@ -29,6 +30,14 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
+      <Script>
+        {`
+          var anchors = document.getElementsByClassName("notion-link");
+          for (var anchor of anchors) {
+            anchor.setAttribute("target","_blank")
+          }
+        `}
+      </Script>
       <ThemeProvider
         enableSystem={true}
         defaultTheme="system"

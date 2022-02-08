@@ -91,7 +91,7 @@ const blogPost = ({ post, blocks }) => {
           </div>
           <div className="flex sm:justify-center mt-2">
             {categories.map(category => (
-              <p className="p-1 mx-1 text-sm bg-blue-50 dark:bg-chromeYellow dark:text-raisinBlack rounded-sm">
+              <p key={category} className="p-1 mx-1 text-sm bg-blue-50 dark:bg-chromeYellow dark:text-raisinBlack rounded-sm">
               {category}
             </p>
             ))}

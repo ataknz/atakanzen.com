@@ -32,8 +32,10 @@ export default class MyDocument extends Document {
           <link rel="shortcut icon" href="/favicon.ico?v=693qL8BNpN" />
           <meta name="msapplication-TileColor" content="#faa916" />
           <meta name="theme-color" content="#ffffff" />
-          <meta name="google-site-verification" content="QEyNh-IOVjpqNQt0wdWhxB5w-kDDNvBZ2l_iNsGt_i4" />
-
+          <meta
+            name="google-site-verification"
+            content="QEyNh-IOVjpqNQt0wdWhxB5w-kDDNvBZ2l_iNsGt_i4"
+          />
           <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${gaTrackingID}`}
