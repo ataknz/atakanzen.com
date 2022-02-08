@@ -5,7 +5,7 @@ import { NotionRenderer } from 'react-notion'
 import { NextSeo } from 'next-seo'
 import { getOpenGraphImage } from '../../utils/og-image'
 import Layout from '../../components/Layout'
-import { capitalize } from '../../utils/common'
+import { extractCategories } from '../../utils/common'
 
 import Prism from 'prismjs'
 
@@ -52,6 +52,8 @@ const blogPost = ({ post, blocks }) => {
     Prism.highlightAll()
   })
 
+  const categories = extractCategories(post.category)
+
   return (
     <>
       <NextSeo
@@ -88,9 +90,11 @@ const blogPost = ({ post, blocks }) => {
             </time>
           </div>
           <div className="flex sm:justify-center mt-2">
-            <p className="p-1 text-sm bg-blue-50 dark:bg-chromeYellow dark:text-raisinBlack rounded-sm">
-              {capitalize(post.category)}
+            {categories.map(category => (
+              <p className="p-1 mx-1 text-sm bg-blue-50 dark:bg-chromeYellow dark:text-raisinBlack rounded-sm">
+              {category}
             </p>
+            ))}
           </div>
         </div>
         <article className="flex-1 w-full max-w-2xl md:max-w-3xl pb-6 mx-auto line-numbers match-braces">
