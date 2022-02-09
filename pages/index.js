@@ -33,7 +33,7 @@ export default function Home() {
       <Layout index={true}>
         <section className="flex flex-col items-center text-center mx-auto lg:max-w-2xl mt-3 text-lg">
           <p className="pb-4">
-            I'm a Full stack Software Engineer, currently based in Poznań,
+            I&apos;m a Full stack Software Engineer, currently based in Poznań,
             Poland.
           </p>
           <p className="pb-4">
@@ -41,7 +41,8 @@ export default function Home() {
             unique works.
           </p>
           <p>
-            If you have any enquiries, please don't hesitate to contact me from{" "}
+            If you have any enquiries, please don&apos;t hesitate to contact me
+            from{" "}
             <a href="mailto:atakanzzengin@gmail.com" id="link">
               atakanzzengin@gmail.com
             </a>

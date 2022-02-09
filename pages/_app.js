@@ -30,7 +30,7 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
-      <Script>
+      <Script id="change-notion-link">
         {`
           var anchors = document.getElementsByClassName("notion-link");
           for (var anchor of anchors) {

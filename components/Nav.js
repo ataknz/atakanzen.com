@@ -10,7 +10,7 @@ export const Nav = () => {
 
   useEffect(() => {
     setMounted(true);
-  });
+  }, []);
 
   // This seems very dodgy I know, will find a better way.
   if (mounted) {

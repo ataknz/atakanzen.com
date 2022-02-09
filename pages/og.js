@@ -1,10 +1,10 @@
-import React from 'react'
-import ProfileImage from '../components/ProfileImage'
-import { useRouter } from 'next/router'
+import React from "react";
+import ProfileImage from "../components/ProfileImage";
+import { useRouter } from "next/router";
 
-const og = () => {
-  const router = useRouter()
-  const { title } = router.query
+const OG = () => {
+  const router = useRouter();
+  const { title } = router.query;
 
   return (
     <div className="flex flex-col items-center pt-28">
@@ -16,7 +16,7 @@ const og = () => {
         atakanzen.com
       </h2>
     </div>
-  )
-}
+  );
+};
 
-export default og
+export default OG;
