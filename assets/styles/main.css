@@ -23,6 +23,10 @@ a:hover {
   @apply no-underline text-blue-900 dark:text-chelseaGem;
 }
 
+p {
+  @apply leading-relaxed text-lg
+}
+
 #__next-build-watcher {
   z-index: 1 !important;
 }
