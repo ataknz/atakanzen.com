@@ -1,4 +1,4 @@
-import ProfileImage from './ProfileImage'
+import ProfileImage from "./ProfileImage";
 
 export const Hero = () => {
   return (
@@ -8,16 +8,15 @@ export const Hero = () => {
           <ProfileImage size={130} />
           <h1 className="robotoSlab text-4xl ">Atakan Zengin</h1>
           <h2 className="robotoSlab font-extralight tracking-wide text-gray-500 dark:text-gray-500 mt-2">
-            Software Engineer &amp; Art Enthusiast
+            Full-Stack Problem Solver
           </h2>
           <div className="max-w-sm flex mt-2">
             <a
               className="transform hover:scale-105 mr-3"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="http://twitter.com/atakanzen_"
+              rel="me"
+              href="https://c.im/@atakan"
             >
-              Twitter
+              Mastodon
             </a>
             <a
               className="transform hover:scale-105 mr-3"
@@ -25,7 +24,7 @@ export const Hero = () => {
               rel="noopener noreferrer"
               href="http://github.com/atakanzen"
             >
-              Github
+              GitHub
             </a>
             <a
               className="transform hover:scale-105"
@@ -33,11 +32,11 @@ export const Hero = () => {
               rel="noopener noreferrer"
               href="http://linkedin.com/in/atakanzen"
             >
-              Linkedin
+              LinkedIn
             </a>
           </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
