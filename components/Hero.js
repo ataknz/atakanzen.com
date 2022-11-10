@@ -14,7 +14,7 @@ export const Hero = () => {
             <a
               className="transform hover:scale-105 mr-3"
               rel="me"
-              href="https://c.im/@atakan"
+              href="https://hachyderm.io/@atakan"
             >
               Mastodon
             </a>
